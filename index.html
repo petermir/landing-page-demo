@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>SWS</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">SWS</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="nav-icon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="#">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="container-contact">
+                <div class="contact-info">
+                  <div>
+                    <h2>Contact Info</h2>
+                    <ul id="info">
+                      <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span
+                          >213 Rainbow Road<br />
+                          Los Angeles, CA<br />
+                          90210</span
+                        >
+                      </li>
+                      <li>
+                        <i class="fas fa-envelope-open"></i>
+                        <span>test@loremipsum.com</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-phone-square-alt"></i>
+                        <span>+123-345-5678</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <form action="" method="POST" class="form">
+                  <div class="close-btn" onclick="togglePopup()">&times;</div>
+                  <div class="form-group">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Full Name"
+                      tabindex="1"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="Your@email.com"
+                      tabindex="2"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="subject"
+                      name="subject"
+                      placeholder="Subject"
+                      tabindex="3"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      cols="50"
+                      id="message"
+                      name="message"
+                      placeholder="Enter Message..."
+                      tabindex="4"
+                    ></textarea>
+                  </div>
+                  <div>
+                    <button type="submit" class="btn-contact">
+                      <span>Send Message!</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <li><a onclick="togglePopup()" class="contact-btn">Contact</a></li>
+        </li>
+      </ul>
+    </header>
+
+    <div class="main">
+      <div class="heading">
+        <h1>We're All Stars Here</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum odio
+          labore voluptas cum. Rem, libero iste? Inventore suscipit consequatur
+          quos odit non ex perspiciatis, cum eligendi voluptatibus. Numquam,
+          quia consectetur?
+        </p>
+        <a href="https://mailchi.mp/c03489de6480/testme" class="btn"
+          >Read More</a
+        >
+      </div>
+    </div>
+
+    <section class="help">
+      <h1>We Can Help</h1>
+      <i class="fas fa-star" style="color: cadetblue"></i>
+      <h5>Lorem ipsum dolor sit, amet consectetur adipisicing.</h5>
+      <div class="two-col">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum iure
+          officia voluptate deleniti quos excepturi earum possimus perferendis
+          aperiam, vel atque, numquam fuga saepe doloremque. Quibusdam iure
+          nostrum magnam aut quas quasi neque vero velit, culpa in molestias
+          voluptatum laborum quia sed officiis laudantium quae totam praesentium
+          dignissimos ipsa unde!
+        </p>
+      </div>
+
+      <div class="two-col">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+          corporis earum ea et inventore, amet dolorem. Facilis labore nobis eum
+          qui? Voluptatibus nisi dolorum dolore!
+        </p>
+      </div>
+    </section>
+
+    <div class="box1">
+      <section class="features-main">
+        <div class="container grid">
+          <div class="card1 flex">
+            <i class="fas fa-upload fa-3x"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              nemo saepe corrupti et dolorem voluptate at, nostrum rem
+              voluptatem ab alias quia molestiae ea, libero nihil deserunt.
+              Molestias, eum? Necessitatibus!
+            </p>
+          </div>
+          <div class="card2 flex">
+            <i class="fas fa-laptop-code fa-3x"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+              magnam.
+            </p>
+          </div>
+          <div class="card3 flex">
+            <i class="fas fa-power-off fa-3x"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+              magnam.
+            </p>
+          </div>
+          <div class="card4 flex">
+            <i class="fas fa-tablet-alt fa-3x"></i>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+              recusandae perferendis culpa, reiciendis a itaque debitis qui vel
+              dignissimos ipsum!
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="dark">
+      <h2>Hosting Stars</h2>
+      <i class="far fa-star" style="color: cadetblue"></i>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quidem
+        repellendus velit hic dolorum ex?
+      </p>
+    </section>
+
+    <div class="box2">
+      <section class="features-main grid2">
+        <div class="astro-head">
+          <h2>Fast Deployment</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+            modi qui nemo quam consequuntur illo enim vitae vel! Alias, earum.
+          </p>
+          <a href="" class="btn">Read More</a>
+        </div>
+        <img src="img/astro.png" alt="" class="astro" />
+      </section>
+    </div>
+
+    <div class="dark">
+      <footer>
+        <div class="foot">
+          <h1><span>S</span>tars <span>W</span>eb <span>S</span>olutions</h1>
+          <h2>We handle your digital needs!</h2>
+          <i class="fas fa-star" style="color: cadetblue"></i>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
+            obcaecati, nam molestias voluptatibus voluptatum accusantium quasi
+            itaque, nemo assumenda et asperiores voluptate repellat repudiandae
+            officia.
+          </p>
+        </div>
+
+        <div class="sm">
+          <a href="/"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="copyright">
+          <p>Copyright &copy; 2020 <em>SWS</em></p>
+        </div>
+
+        <section class="wrap">
+          <section class="light">
+            <div class="one">
+              <div class="two">
+                <div class="three">
+                  <div class="four">
+                    <div class="five"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </footer>
+    </div>
+
+    <script>
+      function togglePopup() {
+        document.getElementById('popup-1').classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

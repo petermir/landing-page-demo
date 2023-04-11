@@ -1,0 +1,267 @@
+/* PopUp Overlay */
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popup .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}
+
+.popup .content {
+  position: fixed;
+  width: 80%;
+  height: 50%;
+  top: 20%;
+  left: 10%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 99;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background: rgb(212, 145, 145);
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 4;
+}
+
+.close-btn:hover {
+  transition: all 0.5s ease-out;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgb(212, 145, 145);
+  background-color: rgb(214, 98, 98);
+}
+
+.popup.active .overlay {
+  display: block;
+}
+
+.popup.active .content {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.contact-btn {
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  color: rgba(6, 8, 17, 0.884);
+  position: relative;
+}
+
+/* Contact */
+
+.container-contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+.contact-info {
+  background-color: rgb(80, 115, 168);
+  position: relative;
+  max-width: 300px;
+  padding: 40px 0 20px 10px;
+  border-radius: 2px;
+  z-index: 3;
+  box-shadow: 0 0 10px rgb(80, 115, 168);
+}
+
+.contact-info h2 {
+  color: cornsilk;
+  font-size: 30px;
+  padding: 0 20px 40px;
+}
+
+#info {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#info li {
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#info li i {
+  padding: 0 10px;
+  font-size: 25px;
+  color: rgb(233, 220, 243);
+  opacity: 0.7;
+}
+
+#info li span {
+  color: rgb(25, 14, 39);
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 140%;
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+#info li span:hover {
+  cursor: pointer;
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Form */
+
+.form {
+  top: 0;
+  position: relative;
+  width: 600px;
+  padding: 40px 40px 40px 80px;
+  background-color: white;
+  border-radius: 3px;
+  transform: translateX(-50px);
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+  transition: all 0.3s;
+}
+
+.form-label {
+  font-size: 0.75em;
+  display: block;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translateX(-50px);
+}
+
+.form-control {
+  box-shadow: none;
+  border-radius: 0;
+  border-color: #ccc;
+  border-style: none none solid none;
+  width: 100%;
+  font-size: 1.25em;
+  transition: all 0.6s;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+.form-group:focus-within {
+  transform: scale(1.1, 1.1);
+}
+
+.form-control:invalid:focus {
+  border-color: red;
+}
+.form-control:valid:focus {
+  border-color: rgb(133, 127, 224);
+}
+
+.form div:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-contact {
+  height: 40px;
+  background: rgb(236, 236, 236);
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 1em;
+  padding: 10 50px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-contact span {
+  padding: 10px;
+}
+
+.btn-contact:hover {
+  cursor: pointer;
+  background-color: rgb(195, 192, 236);
+  box-shadow: 0 0 10px rgb(133, 127, 224);
+}
+textarea {
+  resize: none;
+}
+
+.focused > .form-label {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+/* Contact Form */
+
+@media (max-width: 750px) {
+  .container-contact {
+    width: 600px;
+    left: 0;
+    grid-template-columns: 1fr;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    transform: translate(-100px, -40px) scale(0.8);
+    transition: 1s ease-out;
+  }
+
+  .form {
+    width: 60%;
+    padding: 30px;
+    top: -30px;
+  }
+
+  .contact-info {
+    top: 0;
+    clip-path: circle(10% at 75% 18%);
+    transform: translateX(-30px) translateY(-570px);
+    transition: all 1s ease-out;
+  }
+
+  .contact-info:hover {
+    cursor: pointer;
+    clip-path: circle(75%);
+    background: rgb(80, 115, 168);
+  }
+
+  .info {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .popup .content {
+    top: 10%;
+    left: -5%;
+  }
+}
